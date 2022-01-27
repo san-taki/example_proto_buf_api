@@ -9,8 +9,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'google/protobuf/timestamp.pb.dart' as $1;
-
 import 'user_service.pbenum.dart';
 
 export 'user_service.pbenum.dart';
@@ -138,7 +136,6 @@ class Me extends $pb.GeneratedMessage {
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'name')
     ..e<Gender>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gender', $pb.PbFieldType.OE, defaultOrMaker: Gender.MALE, valueOf: Gender.valueOf, enumValues: Gender.values)
     ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'age', $pb.PbFieldType.O3)
-    ..aOM<$1.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastUpdated', subBuilder: $1.Timestamp.create)
     ..pc<Address>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'addresses', $pb.PbFieldType.PM, subBuilder: Address.create)
     ..hasRequiredFields = false
   ;
@@ -149,7 +146,6 @@ class Me extends $pb.GeneratedMessage {
     $core.String? name,
     Gender? gender,
     $core.int? age,
-    $1.Timestamp? lastUpdated,
     $core.Iterable<Address>? addresses,
   }) {
     final _result = create();
@@ -164,9 +160,6 @@ class Me extends $pb.GeneratedMessage {
     }
     if (age != null) {
       _result.age = age;
-    }
-    if (lastUpdated != null) {
-      _result.lastUpdated = lastUpdated;
     }
     if (addresses != null) {
       _result.addresses.addAll(addresses);
@@ -230,19 +223,8 @@ class Me extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearAge() => clearField(4);
 
-  @$pb.TagNumber(5)
-  $1.Timestamp get lastUpdated => $_getN(4);
-  @$pb.TagNumber(5)
-  set lastUpdated($1.Timestamp v) { setField(5, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasLastUpdated() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearLastUpdated() => clearField(5);
-  @$pb.TagNumber(5)
-  $1.Timestamp ensureLastUpdated() => $_ensure(4);
-
   @$pb.TagNumber(6)
-  $core.List<Address> get addresses => $_getList(5);
+  $core.List<Address> get addresses => $_getList(4);
 }
 
 class GetMeRequest extends $pb.GeneratedMessage {

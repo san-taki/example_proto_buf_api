@@ -47,13 +47,12 @@ const Me$json = const {
     const {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
     const {'1': 'gender', '3': 3, '4': 1, '5': 14, '6': '.food_api.Gender', '10': 'gender'},
     const {'1': 'age', '3': 4, '4': 1, '5': 5, '10': 'age'},
-    const {'1': 'last_updated', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'lastUpdated'},
     const {'1': 'addresses', '3': 6, '4': 3, '5': 11, '6': '.food_api.Address', '10': 'addresses'},
   ],
 };
 
 /// Descriptor for `Me`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List meDescriptor = $convert.base64Decode('CgJNZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIoCgZnZW5kZXIYAyABKA4yEC5mb29kX2FwaS5HZW5kZXJSBmdlbmRlchIQCgNhZ2UYBCABKAVSA2FnZRI9CgxsYXN0X3VwZGF0ZWQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgtsYXN0VXBkYXRlZBIvCglhZGRyZXNzZXMYBiADKAsyES5mb29kX2FwaS5BZGRyZXNzUglhZGRyZXNzZXM=');
+final $typed_data.Uint8List meDescriptor = $convert.base64Decode('CgJNZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSEgoEbmFtZRgCIAEoCVIEbmFtZRIoCgZnZW5kZXIYAyABKA4yEC5mb29kX2FwaS5HZW5kZXJSBmdlbmRlchIQCgNhZ2UYBCABKAVSA2FnZRIvCglhZGRyZXNzZXMYBiADKAsyES5mb29kX2FwaS5BZGRyZXNzUglhZGRyZXNzZXM=');
 @$core.Deprecated('Use getMeRequestDescriptor instead')
 const GetMeRequest$json = const {
   '1': 'GetMeRequest',

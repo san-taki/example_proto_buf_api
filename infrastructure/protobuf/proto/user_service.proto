@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package food_api;
-import "google/protobuf/timestamp.proto";
+// import "google/protobuf/timestamp.proto";
 
 // 性別
 enum Gender {
@@ -41,8 +41,6 @@ message Me {
     Gender gender = 3;
     // 年齢
     int32 age = 4;
-    // 最終更新
-    google.protobuf.Timestamp last_updated = 5;
     // アドレス(List)
     repeated Address addresses = 6;
 }
