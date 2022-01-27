@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package food_api;
+import "google/protobuf/timestamp.proto";
+
+// 性別
+enum Gender {
+    // 男性
+    MALE = 0;
+    // 女性
+    FEMALE = 1;
+    // その他
+    OTHER = 2;
+    // 未回答
+    NO_ANSWER = 3;
+}
+
+// 住所
+message Address {
+    // 郵便番号 前半3桁
+    string postal_code_first = 1;
+    // 郵便番号 後半4桁
+    string postal_code_seccond = 2;
+    // 県
+    string state = 3;
+    // 市
+    string city = 4;
+    // 番地
+    string address_line1 = 5;
+    // マンション名、部屋番号
+    optional string address_line2 = 6;
+}
+
+// Me
+message Me {
+    // ID
+    string user_id = 1;
+    // 名前
+    string name = 2;
+    // 性別
+    Gender gender = 3;
+    // 年齢
+    int32 age = 4;
+    // 最終更新
+    google.protobuf.Timestamp last_updated = 5;
+    // アドレス(List)
+    repeated Address addresses = 6;
+}
+
+message GetMeRequest {
+    string user_id = 1;
+}
+
+message GetMeResponse {
+    Me me = 1;
+}
+
+service UserService {
+    // Me情報を取得
+    rpc GetMe(GetMeRequest) returns (GetMeResponse);
+}
